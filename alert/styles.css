@@ -1,0 +1,15 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.max-content {
+  max-width: 1440px;
+}
