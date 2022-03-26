@@ -1,92 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="icon" href="assets/favicon.ico" type="image/x-ico" />
     <title>Dito - Cuiabano</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-            <img src="/assets/logo.svg" alt="logo">
-        </a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+      <a class="navbar-brand" href="#">
+        <img src="/assets/logo.svg" alt="logo" />
+      </a>
+      <button
+        class="navbar-toggler d-lg-none"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+      <div class="collapse navbar-collapse w-100" id="collapsibleNavId">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link bungee" href="/index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bungee" href="/about.html">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bungee" href="/recipies.html">Receitas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bungee" href="/contact.html">Contatos</a>
+          </li>
 
-        <div class="collapse navbar-collapse w-100" id="collapsibleNavId">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0 ">
-                <li class="nav-item">
-                    <a class="nav-link bungee " href="/index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link bungee" href="#">Bio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link bungee" href="/recipies.html">Receitas</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link bungee" href="/contact.html">Contatos</a>
-                </li>
-
-                <li class="nav-item active">
-                    <a class="nav-link bungee" href="/requests.html">+Pedidos</a>
-                </li>
-
-            </ul>
-
-        </div>
+          <li class="nav-item active">
+            <a class="nav-link bungee" href="/requests.html">+Pedidos</a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
-    <div class="bg-dark container-height d-flex justify-content-center  align-items-center">
+    <div
+      class="bg-dark container-height d-flex justify-content-center align-items-center"
+    >
+      <form class="bg-light py-5 px-4 rounded-lg">
+        <h1 class="text-center mb-5">Faça o pedido</h1>
 
-        <form class="bg-light py-5 px-4 rounded-lg">
-            <h1 class="text-center mb-5">Nos contate</h1>
+        <div class="form-group">
+          <label for="firstName">Galinhada</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
 
-            <div class="form-group ">
-                <label for="firstName">Galinhada</label>
-                <input type="text" class="form-control" id="firstName" placeholder="Digite seu nome">
-            </div>
+        <div class="form-group">
+          <label for="password">Peixada</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
 
+        <div class="form-group">
+          <label for="inputAddress">Maria Isabel</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
 
-            <div class="form-group ">
-                <label for="password">Peixada</label>
-                <input type="nunber" class="form-control " id="password" placeholder="Digite sua senha">
-            </div>
-
-            <div class="form-group">
-                <label for="inputAddress">Maria Isabel</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Digite seu email">
-            </div>
-
-
-            <div class="form-group">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                    Aceito os termos
-                    </label>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Criar conta</button>
-        </form>
-
+        <button type="submit" class="btn btn-primary">Criar conta</button>
+      </form>
     </div>
-
-</body>
-
+    <div class="bg-light py-5 d-flex flex-column align-items-center justify-content-between" >
+      <div class="max-content-xl row">
+          <div class="col-12 col-lg-6 ">
+              <a class="navbar-brand mb-3" href="#">
+                  <img src="/assets/logo.svg" alt="logo">
+              </a>
+              <p class="mb-0" >R. Zulmira Canavarros, 95</p>
+              <p class="mb-0" >Centro, Cuiabá - MT</p>
+              <p class="mb-0" >18005-390</p>
+          </div>          
+          <div class="col-12 col-lg-6 row justify-content-end align-items-center mt-5 mt-lg-0">
+              <div>
+                  <p class="mb-0" >(99) 9 9999 - 9999</p>
+              <p class="mb-0" >contact@ditocuiabano</p>
+              <div class="bg-danger rounded  pr-5 pl-1 py-1 content-input" >
+                  <input  type="text" class="form-control" placeholder="Digite seu email">
+                  <img src="assets/right.svg" alt="arrow-rigth" >
+              </div>
+              </div>
+          </div>
+      </div>
+      <p  class="bungee copy-color text-center mt-5" >@Copyright <strong id="copy" ></strong> - 
+      <a href="https://github.com/TiagoGP-exe" class="bungee" target="_blank" rel="noopener noreferrer">Tiagogp-exe</a>
+      </p>
+  </div>
+  <script src="srcipt.js"></script>
+  </body>
 </html>
