@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Campus cuiabá</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="d-flex flex-column align-items-center">
+      <div class="container-fluid max-content mt-5">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <img src="assets/logo.png" alt="" />
+          </div>
+          <div class="col-12 col-md-6 bg">
+            <div class="d-flex h-75 align-items-end">
+              <div class="form-outline w-100">
+                <input
+                  type="search"
+                  placeholder="Buscar notícias, eventos e mais..."
+                  id="form1"
+                  class="form-control"
+                />
+              </div>
+              <button type="button" class="btn btn-success">Buscar</button>
+            </div>
+            <div class="d-flex font-xs flex-wrap">
+              <p class="mb-0">Mapa do site</p>
+              <p class="mb-0">Sistemas</p>
+              <p class="mb-0">Ovidoria</p>
+              <p class="mb-0">Decom</p>
+              <p class="mb-0 mt-0">Agenda dos Gestores</p>
+            </div>
+          </div>
+          <div class="col-lg-8 mt-5">
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <ol class="carousel-indicators indicators-1"></ol>
+              <div
+                class="carousel-inner roudend-carousel roudend-carousel-1"
+              ></div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselExampleIndicators"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExampleIndicators"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-5">
+            <div class="banners"></div>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center mb-3">
+              <img src="assets/plus.svg" alt="" />
+              <h3 class="ml-2 mb-0">NOTÍCIAS</h3>
+            </div>
+            <div class="notices-card"></div>
+          </div>
+          <div class="col-lg-4 bg-light py-4">
+            <div class="d-flex align-items-center mb-3">
+              <img src="assets/plus.svg" alt="" />
+              <h3 class="ml-2 mb-0">GUIA DE CURSOS</h3>
+            </div>
+
+            <p class="mb-0">Selecione um tipo de formação</p>
+            <select class="custom-select" id="inputGroupSelect01">
+              <option selected>--------</option>
+              <option value="1">Cursos Superiores</option>
+              <option value="6">
+                Cursos técnicos concomitantes ao Ensino Médio
+              </option>
+              <option value="3">
+                Cursos técnicos integrados ao Ensino Médio
+              </option>
+              <option value="5">
+                Cursos técnicos integrados ao Ensino Médio - Proeja
+              </option>
+              <option value="4">
+                Cursos técnicos subsequentes ao Ensino Médio
+              </option>
+              <option value="2">Pós-Graduação - Especialização</option>
+              <option value="8">Pós-Graduação - Mestrado</option>
+            </select>
+            <p class="mb-0 mt-3">Selecione um Câmpus</p>
+            <select class="custom-select" id="inputGroupSelect01">
+              <option selected>--------</option>
+            </select>
+            <p class="mb-0 mt-3">Selecione um curso</p>
+            <select class="custom-select" id="inputGroupSelect01">
+              <option selected>--------</option>
+            </select>
+
+            <div class="d-flex justify-content-end mt-3 mb-4">
+              <button class="btn btn-success py-2 px-4">Buscar Cursos</button>
+            </div>
+
+            <div class="d-flex align-items-center mb-3">
+              <img src="assets/plus.svg" alt="" />
+              <h3 class="ml-2 mb-0">EVENTOS</h3>
+            </div>
+
+            <div class="d-flex mb-2 align-items-center">
+              <div class="bg-success d-flex eventsWidth">
+                <p class="text-white mb-0 text-center">20 Ago 2022</p>
+              </div>
+              <p class="mb-0 ml-3">7º JIFMT 2022</p>
+            </div>
+            <div class="d-flex mb-2 align-items-center">
+              <div
+                class="bg-success d-flex justify-content-center d-flex align-items-center eventsWidth"
+              >
+                <p class="text-white mb-0 text-center">25 Jul 2022</p>
+              </div>
+              <p class="mb-0 ml-3">3º MArte 2022</p>
+            </div>
+            <div class="d-flex align-items-center">
+              <div
+                class="bg-success d-flex justify-content-center align-items-center eventsWidth"
+              >
+                <p class="text-white mb-0 text-center">28 Mai 2022</p>
+              </div>
+              <p class="mb-0 ml-3">Jogos Eletrônicos do IFMT (E-JIF)</p>
+            </div>
+          </div>
+          <div class="col-lg-4 py-4">
+            <h3>PRÓ-REITORIAS</h3>
+            <p>° Pró-Reitoria de Administração</p>
+            <p>° Pró-Reitoria de Desenvolvimento Institucional</p>
+            <p>° Pró-Reitoria de Ensino</p>
+            <p>° Pró-Reitoria de Extensão</p>
+            <p>° Pró-Reitoria de Pesquisa e Inovação</p>
+            <p>° Pró-Reitoria de Gestão de Pessoas</p>
+
+            <h3>DIRETORIAS</h3>
+            <p>° Diretoria Sistêmica de Planejamento e Captação de Recursos</p>
+            <p>
+              ° Diretoria Sistêmica de Assistência Estudantil, Inclusão e
+              Diversidade
+            </p>
+            <p>° Diretoria Sistêmica de Relações Internacionais</p>
+            <p>° Diretoria Sistêmica de Tecnologia da Informação</p>
+
+            <div class="d-flex align-items-center mb-3">
+              <img src="assets/plus.svg" alt="" />
+              <h3 class="ml-2 mb-0">GALERIAS</h3>
+            </div>
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <ol class="carousel-indicators indicators-2"></ol>
+              <div
+                class="carousel-inner roudend-carousel roudend-carousel-2"
+              ></div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselExampleIndicators"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExampleIndicators"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <div class="d-flex align-items-center mt-2">
+              <img src="assets/plus.svg" alt="" />
+              <h3 class="mb-0">VÍDEO</h3>
+            </div>
+            <iframe
+              width="100%"
+              style="max-height: 300px"
+              height="100%"
+              src="https://www.youtube.com/embed/ZCAUqsoKebA"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="col-8">
+            <div class="d-flex align-items-center mb-3">
+              <img src="assets/plus.svg" alt="" />
+              <h3 class="ml-2 mb-0">LINKS DE ACESSO</h3>
+            </div>
+            <div class="d-flex flex-wrap link-access"></div>
+          </div>
+
+          <div class="col-8 mt-2">
+            <div class="d-flex align-items-center mb-3">
+              <img src="assets/plus.svg" alt="" />
+              <h3 class="ml-2 mb-0">LINKS GOVERNAMENTAIS</h3>
+            </div>
+            <div class="d-flex flex-wrap link-gov"></div>
+          </div>
+
+          <div class="col-12 mt-5">
+            <hr/>
+            <p class="mb-0 text-center ">
+              Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso
+            </p>
+            <p class="mb-0 text-center ">
+              Avenida Sen. Filinto Müller, 953 - Bairro: Quilombo - CEP:
+              78043-409
+            </p>
+            <p class="mb-0 text-center ">Telefone: (65) 3616-4100</p>
+            <p class="mb-0 text-center ">Cuiabá/MT</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const linkGov = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+      const linkAccess = ["1", "2", "3", "4"];
+      const firstCarouselData = [
+        {
+          src: "assets/carousel-1.png",
+          alt: "First slide",
+          button: "Abr 28",
+          description:
+            "Inscrições para Curso de Empreendedorismo com universidade portuguesa terminam dia 30 ",
+        },
+        {
+          src: "assets/carousel-2.png",
+          alt: "Second slide",
+          button: "Abr 28",
+          description:
+            "DIEX lança canal exclusivo para solicitação de apoio à eventos e cobertura jornalística",
+        },
+        {
+          src: "assets/carousel-3.png",
+          alt: "Third slide",
+          button: "Abr 28",
+          description:
+            "Planejamento marcou 2º dia do Congresso Técnico do 7° JIFMT 2022",
+        },
+      ];
+
+      const secondCarouselData = [
+        {
+          src: "assets/carousel-2-1.jpg",
+          alt: "First slide",
+        },
+        {
+          src: "assets/carousel-2-2.jpg",
+          alt: "Second slide",
+        },
+        {
+          src: "assets/carousel-2-3.jpg",
+          alt: "Third slide",
+        },
+      ];
+
+      const bannerSrc = [
+        { src: "assets/banner-1.png", text: "Plano de prioridades 2022-2023" },
+        { src: "assets/banner-2.jpg", text: "Política de Comunicação IFMT " },
+        {
+          src: "assets/banner-3.jpg",
+          text: "Processo Seletivo 2022/1: Cursos Técnicos Subsequentes",
+        },
+        {
+          src: "assets/banner-4.jpg",
+          text: "Processos Seletivo 2022/1: Cursos Superiores",
+        },
+      ];
+
+      const noticesData = [
+        {
+          title: "29 Abr - Campus Cuiabá",
+          description:
+            "Comunicado Edital Nº 18/2022 - Processo seletivo de estudantes para o curso de formação inicial e continuada",
+        },
+        {
+          title: "27 Abr - Reitoria",
+          description:
+            "Bate-papo com o servidor será amanhã (28) às 14h em parceria com o UNIFICA",
+        },
+        {
+          title: "27 Abr - Reitoria",
+          description:
+            "Divulgada a análise de recursos e resultado final das inscrições para o mestrado em Portugal",
+        },
+        {
+          title: "27 Abr - Campus Cuiabá",
+          description:
+            "Campus Cuiabá Octayde participará de Festival de Culinária Cuiabana ‘Matula’ que acontece nesse fim de semana na Praça Santos Dumont",
+        },
+        {
+          title: "27 Abr - Campus Cuiabá",
+          description:
+            "Campus Cuiabá Octayde sedia 1º Congresso Técnico do JIFMT 2022",
+        },
+        {
+          title: "27 Abr - Reitoria",
+          description:
+            "Propes lança editais de apoio à Pesquisa; Submissão de projetos de 28/04 a 23/05",
+        },
+      ];
+
+      $(document).ready(() => {
+        $.map(firstCarouselData, (val, i) =>
+          $(".roudend-carousel-1").append(`
+            <div class="carousel-item ${
+              i === 0 ? "active" : ""
+            } position-relative">
+              <div class='gradient'></div>
+                <div class="carousel-caption d-none d-md-block">
+                 <div class='d-flex justify-content-between align-items-center' >
+                  <button class='btn btn-danger'>${val.button}</button>
+                  <p class='w-75 text-left' >${val.description}</p>
+                  </div>
+                </div>
+                  <img src="${val.src}" class="d-block w-100" alt="${val.alt}">
+            </div>
+          `)
+        );
+
+        $.map(firstCarouselData, (val, i) =>
+          $(".indicators-1").append(`
+            <li data-target="#carouselExampleIndicators" data-slide-to="${i}" class="${
+            i === 0 ? "active" : ""
+          }"></li>
+          `)
+        );
+
+        $.map(secondCarouselData, (val, i) =>
+          $(".roudend-carousel-2").append(`
+            <div class="carousel-item ${
+              i + 5 === 5 ? "active" : ""
+            } position-relative">
+            <div class='gradient'></div>
+              <img src="${val.src}" class="d-block w-100" alt="${val.alt}">
+            </div>
+          `)
+        );
+
+        $.map(secondCarouselData, (val, i) =>
+          $(".indicators-2").append(`
+            <li data-target="#carouselExampleIndicators" data-slide-to="${
+              i + 5
+            }" class="${i + 5 === 0 ? "active" : ""}"></li>
+          `)
+        );
+
+        $.map(bannerSrc, (val) =>
+          $(".banners").append(`
+          <div class='d-flex align-items-center mb-4'>
+            <img src="${val.src}" class=" asda mr-2" alt="${val.text}">
+            <p class='d-lg-none border w-100  flex-1'>${val.text}</p>
+          </div>
+          `)
+        );
+
+        $.map(noticesData, (val, i) =>
+          $(".notices-card").append(`
+            <div class="border-left item-notice-card border-danger pl-2 mb-2" >
+              <p class="mb-0 text-danger pointer" >${val.title}</p>
+              <div class="mb-2" >
+                ${val.description}
+              </div>
+            </div>
+          `)
+        );
+
+        $.map(linkGov, (val, i) =>
+          $(".link-gov").append(`
+            <img src="assets/gov-link-${val}.jpg" class='w-25'  alt="${val}">
+          `)
+        );
+
+        $.map(linkAccess, (val, i) =>
+          $(".link-access").append(`
+            <img src="assets/gov-link-${val}.jpg" class='w-25'  alt="${val}">
+          `)
+        );
+
+        $(".item-notice-card").click(function () {
+          $(this).children("div").slideToggle();
+        });
+      });
+    </script>
+  </body>
+</html>
