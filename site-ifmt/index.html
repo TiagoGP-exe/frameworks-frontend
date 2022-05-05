@@ -87,16 +87,33 @@
             </div>
           </div>
           <div class="col-lg-4 mt-5">
-            <div class="banners"></div>
+            <div class="banners">
+              <div class='align-items-center border mb-4 position-relative itemBanner'>
+                <img src="assets/banner-1.png" class=" asda mr-2" alt="Plano de prioridades 2022-2023">
+                <p class='d-lg-none w-100 flex-1'>Plano de prioridades 2022-2023</p>
+              </div>
+              <div class=' align-items-center mb-4  itemBanner border'>
+                <img src="assets/banner-2.jpg" class=" asda mr-2" alt="Política de Comunicação IFMT">
+                <p class='d-lg-none w-100  flex-1'>Política de Comunicação IFMT</p>
+              </div>
+              <div class='align-items-center mb-4  itemBanner border'>
+                <img src="assets/banner-3.jpg" class=" asda mr-2" alt="Cursos Técnicos Subsequentes">
+                <p class='d-lg-none w-100  flex-1'>Cursos Técnicos Subsequentes</p>
+              </div>
+              <div class='align-items-center mb-4  itemBanner border'>
+                <img src="assets/banner-4.jpg" class=" asda mr-2" alt="Cursos Superiores">
+                <p class='d-lg-none w-100  flex-1'>Cursos Superiores</p>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-4">
-            <div class="d-flex align-items-center mb-3">
+          <div class="col-lg-4 mt-4 ">
+            <div class="d-flex align-items-center mb-3 notice-header">
               <img src="assets/plus.svg" alt="" />
               <h3 class="ml-2 mb-0">NOTÍCIAS</h3>
             </div>
             <div class="notices-card"></div>
           </div>
-          <div class="col-lg-4 bg-light py-4">
+          <div class="col-lg-4 bg-light py-4 mt-4">
             <div class="d-flex align-items-center mb-3">
               <img src="assets/plus.svg" alt="" />
               <h3 class="ml-2 mb-0">GUIA DE CURSOS</h3>
@@ -233,15 +250,15 @@
               allowfullscreen
             ></iframe>
           </div>
-          <div class="col-8">
-            <div class="d-flex align-items-center mb-3">
+          <div class="col-8 mt-5">
+            <div class="d-flex align-items-center mt-5 mb-3">
               <img src="assets/plus.svg" alt="" />
               <h3 class="ml-2 mb-0">LINKS DE ACESSO</h3>
             </div>
             <div class="d-flex flex-wrap link-access"></div>
           </div>
 
-          <div class="col-8 mt-2">
+          <div class="col-8 mt-4">
             <div class="d-flex align-items-center mb-3">
               <img src="assets/plus.svg" alt="" />
               <h3 class="ml-2 mb-0">LINKS GOVERNAMENTAIS</h3>
@@ -249,7 +266,7 @@
             <div class="d-flex flex-wrap link-gov"></div>
           </div>
 
-          <div class="col-12 mt-5">
+          <div class="col-12 mt-2">
             <hr/>
             <p class="mb-0 text-center ">
               Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso
@@ -304,19 +321,6 @@
         {
           src: "assets/carousel-2-3.jpg",
           alt: "Third slide",
-        },
-      ];
-
-      const bannerSrc = [
-        { src: "assets/banner-1.png", text: "Plano de prioridades 2022-2023" },
-        { src: "assets/banner-2.jpg", text: "Política de Comunicação IFMT " },
-        {
-          src: "assets/banner-3.jpg",
-          text: "Processo Seletivo 2022/1: Cursos Técnicos Subsequentes",
-        },
-        {
-          src: "assets/banner-4.jpg",
-          text: "Processos Seletivo 2022/1: Cursos Superiores",
         },
       ];
 
@@ -398,14 +402,11 @@
           `)
         );
 
-        $.map(bannerSrc, (val) =>
-          $(".banners").append(`
-          <div class='d-flex align-items-center mb-4'>
-            <img src="${val.src}" class=" asda mr-2" alt="${val.text}">
-            <p class='d-lg-none border w-100  flex-1'>${val.text}</p>
-          </div>
-          `)
-        );
+
+        $('.itemBanner').click(function (){
+          console.log($(this))
+          $(this).hide();
+        });
 
         $.map(noticesData, (val, i) =>
           $(".notices-card").append(`
@@ -429,6 +430,10 @@
             <img src="assets/gov-link-${val}.jpg" class='w-25'  alt="${val}">
           `)
         );
+
+        $('.notice-header').click(() => {
+          $('.notices-card').fadeToggle();
+        });
 
         $(".item-notice-card").click(function () {
           $(this).children("div").slideToggle();
