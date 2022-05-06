@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Grid - Conceitos</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="https://bit.ly/3iaHO5q" type="image/x-gif" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div style="min-height: 100vh;" class="d-flex justify-content-center align-items-center bg-primary">
+
+        <div class="d-flex flex-wrap align-items-center gap">
+            <div class='containerQuestions max-card position-relative '>
+                <h5>De quem é a famosa frase “Penso, logo existo”?</h5>
+                <div style='display:none;'>Descartes</div>
+
+                <button class="btn btn-success position-absolute w-100 type-1" style="bottom: -50px;  left: 0;"> Ok</button>
+            </div>
+            <div class='containerQuestions max-card position-relative '>
+                <h5>De onde é a invenção do chuveiro elétrico?</h5>
+                <div style='display:none;'>Brasil</div>
+
+                <button class="btn btn-success position-absolute w-100 type-1" style="bottom: -50px;  left: 0;"> Ok</button>
+            </div>
+
+            <div class='containerQuestions max-card type-2'>
+                <h5>Quais o menor e o maior país do mundo?</h5>
+                <div style='display:none;'>Vaticano</div>
+            </div>
+
+            <div class='containerQuestions max-card type-2'>
+                <h5> Qual o livro mais vendido no mundo a seguir à Bíblia?</h5>
+                <div style='display:none;'>Dom Quixote</div>
+            </div>
+
+            <div class='containerQuestions max-card type-3'>
+                <h5>Quantas casas decimais tem o número pi?</h5>
+                <div style='display:none;'>Infinitas</div>
+            </div>
+
+            <div class='containerQuestions max-card type-3'>
+                <h5> Quem pintou "Guernica"?</h5>
+                <div style='display:none;'>Pablo Picasso</div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        const fakeValue = ['Primeira pergunta', 'Segunda pergunta', 'Terceira pergunta', 'Quarta pergunta', 'Quinta pergunta', 'Sexta pergunta', ]
+
+
+        $(document).ready(function() {
+            $('.type-3').click(function() {
+                $(this).children('div').slideToggle(150)
+            })
+
+
+            $('.type-2').click(function() {
+                $(this).children('div').slideDown(150);
+            })
+
+            $('p').click(function() {
+                $(this).css("color", "red").slideUp(2000).slideDown(2000);
+            })
+
+            $('.type-1').click(function() {
+                $(this).siblings('div').toggle()
+            })
+        })
+    </script>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+
+</html>
