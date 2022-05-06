@@ -1,0 +1,29 @@
+.containerQuestions {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem 0;
+    border-radius: 0.5rem;
+    background-color: rgba(240, 248, 255, 0.445);
+    cursor: pointer;
+}
+
+.containerQuestions h3 {
+    text-align: center;
+}
+
+.containerQuestions div {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem 2rem 1rem;
+    border-radius: 0.5rem;
+    background-color: rgba(240, 248, 255, 0.445);
+}
+
+.gap {
+    gap: 1rem;
+}
+
+.max-container {
+    max-width: 1024px;
+    width: 90%;
+}

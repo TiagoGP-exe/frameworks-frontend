@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Grid - Conceitos</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="https://bit.ly/3iaHO5q" type="image/x-gif" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div style="min-height: 100vh;" class="d-flex justify-content-center align-items-center bg-light">
+
+
+        <div class="d-flex flex-column p-4  w-100 max-container">
+            <div class="bg-danger square" style="width: 60px; height: 60px; border-radius: 1rem;"></div>
+
+            <div class="bg-primary circle mt-3" style="width: 60px; height: 60px; border-radius: 3rem;"></div>
+            <img src="image.png" class="photo mt-3" width="100px" height="100px" alt="">
+        </div>
+
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        const fakeValue = ['Primeira pergunta', 'Segunda pergunta', 'Terceira pergunta', 'Quarta pergunta', 'Quinta pergunta', 'Sexta pergunta', ]
+
+
+        $(document).ready(function() {
+            $('.square').click(function() {
+                $(this).animate({
+                    left: '250px',
+                    opacity: '0.5',
+                    height: '150px',
+                    width: '150px'
+                }, "slow");
+            })
+
+            $('.circle').click(function() {
+                $(this).animate({
+                    marginLeft: '100%',
+                    opacity: '0.5',
+                }, "slow");
+            })
+
+
+            $('.photo').click(function() {
+                $(this).animate({
+                    marginLeft: '90%',
+                    height: '250px',
+                    width: '250px'
+
+                }, "slow");
+            })
+        })
+    </script>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+
+</html>
