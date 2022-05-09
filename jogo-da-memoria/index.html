@@ -1,80 +1,265 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
+  <head>
     <title>Memory Game</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="icon" href="logo.png" type="image/x-png" />
-</head>
+  </head>
 
-<body>
-    <div class="d-flex justify-content-center bg-light min-vh ">
-
-        <div class="d-flex max-content bg-danger flex-wrap">
-            <div class="max-width-card position-relative">
-                <div>
-                    <img src="heros/hero-1.jpg" class="imgsd" style="display: none;" alt="">
-                </div>
-                <img src="fundo.jpg" class="imgsd" />
+  <body>
+    <div
+      class="d-flex flex-column justify-content-center align-items-center bg-light min-vh"
+    >
+      <button class="btn btn-dark mb-5">Inciar o jogo</button>
+      <div
+        class="d-flex flex-column max-content justify-content-center align-items-center gap"
+      >
+        <div class="row gap mb-4">
+          <div class="max-width-card position-relative" >
+            <div class="position-absolute" style="display: none">
+              <img src="heros/hero-1.jpg" class="w-100 rounded-card" alt="" />
             </div>
-        </div>
+            <img src="fundo.jpg" class="w-100 rounded-card" />
+          </div>
+          <div class="max-width-card position-relative">
+            <div class="position-absolute" style="display: none">
+              <img src="heros/hero-2.jpg" class="w-100 rounded-card" alt="" />
+            </div>
+            <img src="fundo.jpg" class="w-100 rounded-card" />
+          </div>
+          <div class="max-width-card position-relative">
+            <div class="position-absolute" style="display: none">
+              <img src="heros/hero-3.jpg" class="w-100 rounded-card" alt="" />
+            </div>
+            <img src="fundo.jpg" class="w-100 rounded-card" />
+          </div>
+          <div class="max-width-card position-relative" >
+            <div class="position-absolute" style="display: none">
+              <img src="heros/hero-4.jpg" class="w-100 rounded-card" alt="" />
+            </div>
+            <img src="fundo.jpg" class="w-100 rounded-card" />
+          </div>
+          <div class="max-width-card position-relative">
+            <div class="position-absolute" style="display: none">
+              <img src="heros/hero-5.jpg" class="w-100 rounded-card" alt="" />
+            </div>
+            <img src="fundo.jpg" class="w-100 rounded-card" />
+          </div>
 
+          <div class="max-width-card position-relative mt-5" >
+            <div class="position-absolute" style="display: none">
+              <img src="heros/hero-1.jpg" class="w-100 rounded-card" alt="" />
+            </div>
+            <img src="fundo.jpg" class="w-100 rounded-card" />
+          </div>
+          <div class="max-width-card position-relative mt-5" >
+            <div class="position-absolute" style="display: none">
+              <img src="heros/hero-2.jpg" class="w-100 rounded-card" alt="" />
+            </div>
+            <img src="fundo.jpg" class="w-100 rounded-card" />
+          </div>
+          <div class="max-width-card position-relative mt-5">
+            <div class="position-absolute" style="display: none">
+              <img src="heros/hero-3.jpg" class="w-100 rounded-card" alt="" />
+            </div>
+            <img src="fundo.jpg" class="w-100 rounded-card" />
+          </div>
+          <div class="max-width-card position-relative mt-5" >
+            <div class="position-absolute" style="display: none">
+              <img src="heros/hero-4.jpg" class="w-100 rounded-card" alt="" />
+            </div>
+            <img src="fundo.jpg" class="w-100 rounded-card" />
+          </div>
+          <div class="max-width-card position-relative mt-5" >
+            <div class="position-absolute" style="display: none">
+              <img src="heros/hero-5.jpg" class="w-100 rounded-card" alt="" />
+            </div>
+            <img src="fundo.jpg" class="w-100 rounded-card" />
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        const fakeValue = ['Primeira pergunta', 'Segunda pergunta', 'Terceira pergunta', 'Quarta pergunta', 'Quinta pergunta', 'Sexta pergunta', ]
+      function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+      }
 
+      let numbersOfCards = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5];
 
-        $(document).ready(function() {
-            $('.square').click(function() {
-                $(this).animate({
-                    left: '250px',
-                    opacity: '0.5',
-                    height: '150px',
-                    width: '150px'
-                }, "slow");
-            })
+      const newOrders = () => {
+        let orders = [];
+        let i = 0;
+        const formated = numbersOfCards.map((number) => {
+          const value = getRandomInt(10);
+          if (orders.includes(value) ) {
+            while (orders.includes(i)) {
+              i = getRandomInt(10);
+            }
+            orders.push(i);
 
-            $('.circle').click(function() {
-                $(this).animate({
-                    marginLeft: '100%',
-                    opacity: '0.5',
-                }, "slow");
-            })
+            return i;
+          }
+          orders.push(value);
+          return value;
+        });
 
-            $('.max-width-card').click(function() {
-                $(this).animate({
-                    deg: -180
-                }, {
-                    duration: 1200,
-                    step: function(now) {
+        const result = formated.map((item) => {
+          return numbersOfCards[item];
+        });
+
+        numbersOfCards = result;
+      };
+
+      $(document).ready(function () {
+        let compareData = [];
+        let totalData = [];
+        let autorize = false;
+
+    
+
+        $(".max-width-card").click(function () {
+          if (!autorize) return;
+          if (totalData.includes($(this).attr("id"))) {
+            console.log("Já foi clicado");
+            return;
+          }
+
+          if (compareData.length < 2) {
+            compareData.push($(this).attr("id"));
+            console.log(compareData);
+          }
+
+          $(this)
+            .children("div")
+            .fadeIn();
+          if (compareData.length >= 2 && compareData[0] === compareData[1]) {
+            compareData = [];
+            totalData.push($(this).attr("id"));
+          }
+
+          if (compareData.length >= 2 && compareData[0] !== compareData[1]) {
+            $("#" + compareData[0])
+              .children("div")
+              .fadeOut();
+            $("#" + compareData[1])
+              .children("div")
+              .fadeOut();
+            compareData = [];
+          }
+
+          if (totalData.length >= 5) {
+            totalData = [];
+            alert("Parabéns você ganhou");
+            autorize = false;
+
+            $(".row")
+              .children("div")
+              .each(function () {
+                const value = $(this).attr("id");
+
+                $(this)
+                  .delay(100 * value)
+                  .animate(
+                    {
+                      deg: 180,
+                    },
+                    {
+                      duration: 900,
+                      step: function (now) {
                         $(this).css({
-                            transform: 'rotateY(' + now + 'deg)'
+                          transform: "rotateY(" + now + "deg)",
                         });
+                      },
                     }
-                });
-            })
+                  );
 
+                $(this)
+                  .children("div")
+                  .animate(
+                    {
+                      deg: -180,
+                    },
+                    {
+                      duration: 250,
+                      step: function (now) {
+                        $(this).css({
+                          transform: "rotateY(" + now + "deg)",
+                        });
+                      },
+                    }
+                  )
+                  .fadeOut();
+              });
+          }
+        });
 
-            $('.photo').click(function() {
-                $(this).animate({
-                    marginLeft: '90%',
-                    height: '250px',
-                    width: '250px'
-                }, "slow");
-            })
-        })
+        $(".btn").click(function () {
+          autorize = true;
+
+          newOrders();
+
+          $(".row")
+            .children("div")
+            .each(function (index) {
+              const value = $(this).attr("id");
+              $(this).attr("id", numbersOfCards[index]);
+              $(this).children("div").children("img").attr("src", `heros/hero-${numbersOfCards[index]}.jpg`);
+              $(this)
+                .delay(100 * value)
+                .animate(
+                  {
+                    deg: -180,
+                  },
+                  {
+                    duration: 900,
+                    step: function (now) {
+                      $(this).css({
+                        transform: "rotateY(" + now + "deg)",
+                      });
+                    },
+                  }
+                );
+
+              $(this)
+                .children("div")
+                .animate(
+                  {
+                    deg: 180,
+                  },
+                  {
+                    duration: 250,
+                    step: function (now) {
+                      $(this).css({
+                        transform: "rotateY(" + now + "deg)",
+                      });
+                    },
+                  }
+                )
+                .fadeIn();
+
+              setTimeout(() => {
+                $(this).children("div").fadeOut();
+              }, 1500);
+            });
+        });
+      });
     </script>
-</body>
-
+  </body>
 </html>
