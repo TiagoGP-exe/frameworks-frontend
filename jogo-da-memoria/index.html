@@ -27,7 +27,8 @@
     >
       <button class="btn btn-dark mb-5">Inciar o jogo</button>
       <div
-        class="d-flex flex-column max-content justify-content-center align-items-center gap"
+      style="justify-items-center: center;"
+        class="d-flex flex-column max-content justify-content-center  align-items-center  bg-dark"
       >
         <div class="row gap mb-4">
           <div class="flip-card ">
@@ -180,6 +181,37 @@
               </div>
             </div>
           </div>
+
+          <div class="flip-card ">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="fundo.jpg" class="w-100 rounded-card" />
+              </div>
+              <div class="flip-card-back">
+                <img
+                  src="heros/hero-1.jpg"
+                  class="w-100"
+                  alt="Avatar"
+                  style="border-radius: 1rem"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="fundo.jpg" class="w-100 rounded-card" />
+              </div>
+              <div class="flip-card-back">
+                <img
+                  src="heros/hero-1.jpg"
+                  class="w-100"
+                  alt="Avatar"
+                  style="border-radius: 1rem"
+                />
+              </div>
+            </div>
+          </div>
         
         </div>
       </div>
@@ -191,7 +223,7 @@
         return Math.floor(Math.random() * max);
       }
 
-      let numbersOfCards = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5];
+      let numbersOfCards = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6];
 
       const newOrders = () => {
         let orders = [];
@@ -266,7 +298,7 @@
                 .children("img")
                 .attr("src", `heros/hero-${numbersOfCards[index]}.jpg`);
               $(this)
-                .delay(100 * index)
+                .delay(300 * index)
                 .addClass("enabled");
 
               setTimeout(() => {
