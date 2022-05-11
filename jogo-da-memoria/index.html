@@ -1,344 +1,282 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+
+<head>
     <title>Memory Game</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="icon" href="logo.png" type="image/x-png" />
-  </head>
+</head>
 
-  <body>
-    <div
-      class="d-flex flex-column justify-content-center align-items-center bg-light min-vh"
-    >
-      <button class="btn btn-dark mb-5">Inciar o jogo</button>
-      <div
-      style="justify-items-center: center;"
-        class="d-flex flex-column max-content justify-content-center  align-items-center  bg-dark"
-      >
-        <div class="row gap mb-4">
-          <div class="flip-card ">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="fundo.jpg" class="w-100 rounded-card" />
-              </div>
-              <div class="flip-card-back">
-                <img
-                  src="heros/hero-1.jpg"
-                  class="w-100"
-                  alt="Avatar"
-                  style="border-radius: 1rem"
-                />
-              </div>
+<body>
+    <div class="d-flex flex-column justify-content-center align-items-center bg-light min-vh">
+        <button class="btn btn-dark my-3">Inciar o jogo</button>
+        <div class="d-flex flex-column max-content justify-content-center align-items-center gap">
+            <div class="row gap mb-4 justify-content-center">
+                <div class="flip-card ">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="fundo.jpg" class="w-100 rounded-card" />
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="heros/hero-1.jpg" class="w-100" alt="Avatar" style="border-radius: 1rem" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card ">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="fundo.jpg" class="w-100 rounded-card" />
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="heros/hero-1.jpg" class="w-100" alt="Avatar" style="border-radius: 1rem" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card ">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="fundo.jpg" class="w-100 rounded-card" />
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="heros/hero-1.jpg" class="w-100" alt="Avatar" style="border-radius: 1rem" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card ">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="fundo.jpg" class="w-100 rounded-card" />
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="heros/hero-1.jpg" class="w-100" alt="Avatar" style="border-radius: 1rem" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card ">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="fundo.jpg" class="w-100 rounded-card" />
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="heros/hero-1.jpg" class="w-100" alt="Avatar" style="border-radius: 1rem" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card ">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="fundo.jpg" class="w-100 rounded-card" />
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="heros/hero-1.jpg" class="w-100" alt="Avatar" style="border-radius: 1rem" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card ">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="fundo.jpg" class="w-100 rounded-card" />
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="heros/hero-1.jpg" class="w-100" alt="Avatar" style="border-radius: 1rem" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card ">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="fundo.jpg" class="w-100 rounded-card" />
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="heros/hero-1.jpg" class="w-100" alt="Avatar" style="border-radius: 1rem" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card ">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="fundo.jpg" class="w-100 rounded-card" />
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="heros/hero-1.jpg" class="w-100" alt="Avatar" style="border-radius: 1rem" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="fundo.jpg" class="w-100 rounded-card" />
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="heros/hero-1.jpg" class="w-100" alt="Avatar" style="border-radius: 1rem" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card ">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="fundo.jpg" class="w-100 rounded-card" />
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="heros/hero-1.jpg" class="w-100" alt="Avatar" style="border-radius: 1rem" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="fundo.jpg" class="w-100 rounded-card" />
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="heros/hero-1.jpg" class="w-100" alt="Avatar" style="border-radius: 1rem" />
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="flip-card ">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="fundo.jpg" class="w-100 rounded-card" />
-              </div>
-              <div class="flip-card-back">
-                <img
-                  src="heros/hero-1.jpg"
-                  class="w-100"
-                  alt="Avatar"
-                  style="border-radius: 1rem"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="flip-card ">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="fundo.jpg" class="w-100 rounded-card" />
-              </div>
-              <div class="flip-card-back">
-                <img
-                  src="heros/hero-1.jpg"
-                  class="w-100"
-                  alt="Avatar"
-                  style="border-radius: 1rem"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="flip-card ">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="fundo.jpg" class="w-100 rounded-card" />
-              </div>
-              <div class="flip-card-back">
-                <img
-                  src="heros/hero-1.jpg"
-                  class="w-100"
-                  alt="Avatar"
-                  style="border-radius: 1rem"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="flip-card ">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="fundo.jpg" class="w-100 rounded-card" />
-              </div>
-              <div class="flip-card-back">
-                <img
-                  src="heros/hero-1.jpg"
-                  class="w-100"
-                  alt="Avatar"
-                  style="border-radius: 1rem"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="flip-card ">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="fundo.jpg" class="w-100 rounded-card" />
-              </div>
-              <div class="flip-card-back">
-                <img
-                  src="heros/hero-1.jpg"
-                  class="w-100"
-                  alt="Avatar"
-                  style="border-radius: 1rem"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="flip-card ">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="fundo.jpg" class="w-100 rounded-card" />
-              </div>
-              <div class="flip-card-back">
-                <img
-                  src="heros/hero-1.jpg"
-                  class="w-100"
-                  alt="Avatar"
-                  style="border-radius: 1rem"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="flip-card ">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="fundo.jpg" class="w-100 rounded-card" />
-              </div>
-              <div class="flip-card-back">
-                <img
-                  src="heros/hero-1.jpg"
-                  class="w-100"
-                  alt="Avatar"
-                  style="border-radius: 1rem"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="flip-card ">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="fundo.jpg" class="w-100 rounded-card" />
-              </div>
-              <div class="flip-card-back">
-                <img
-                  src="heros/hero-1.jpg"
-                  class="w-100"
-                  alt="Avatar"
-                  style="border-radius: 1rem"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="fundo.jpg" class="w-100 rounded-card" />
-              </div>
-              <div class="flip-card-back">
-                <img
-                  src="heros/hero-1.jpg"
-                  class="w-100"
-                  alt="Avatar"
-                  style="border-radius: 1rem"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="flip-card ">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="fundo.jpg" class="w-100 rounded-card" />
-              </div>
-              <div class="flip-card-back">
-                <img
-                  src="heros/hero-1.jpg"
-                  class="w-100"
-                  alt="Avatar"
-                  style="border-radius: 1rem"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="fundo.jpg" class="w-100 rounded-card" />
-              </div>
-              <div class="flip-card-back">
-                <img
-                  src="heros/hero-1.jpg"
-                  class="w-100"
-                  alt="Avatar"
-                  style="border-radius: 1rem"
-                />
-              </div>
-            </div>
-          </div>
-        
         </div>
-      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-      function getRandomInt(max) {
-        return Math.floor(Math.random() * max);
-      }
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
 
-      let numbersOfCards = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6];
+        let numbersOfCards = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6];
 
-      const newOrders = () => {
-        let orders = [];
-        let i = 0;
-        const formated = numbersOfCards.map((number) => {
-          const value = getRandomInt(10);
-          if (orders.includes(value)) {
-            while (orders.includes(i)) {
-              i = getRandomInt(10);
-            }
-            orders.push(i);
+        const newOrders = () => {
+            let orders = [];
+            let i = 0;
+            const formated = numbersOfCards.map((number) => {
+                const value = getRandomInt(numbersOfCards.length);
+                if (orders.includes(value)) {
+                    while (orders.includes(i)) {
+                        i = getRandomInt(numbersOfCards.length);
+                        console.log(i)
+                    }
+                    orders.push(i);
 
-            return i;
-          }
-          orders.push(value);
-          return value;
-        });
-
-        const result = formated.map((item) => {
-          return numbersOfCards[item];
-        });
-
-        numbersOfCards = result;
-      };
-
-      $(document).ready(function () {
-        let compareData = [];
-        let totalData = [];
-        let autorize = false;
-
-        $(".flip-card").click(function () {
-          if (!autorize) return;
-          if (totalData.some(value => value.id === $(this).attr("id"))) {
-            console.log("Já foi clicado");
-            return;
-          }
-
-          if (compareData.length < 2) {
-            compareData.push({id: $(this).attr("id"), data: $(this).attr("data-hero")});
-            $(this).addClass("enabled");
-          }
-
-          if (compareData.length >= 2 && compareData[0].id === compareData[1].id) {
-            compareData = [];
-            totalData.push($(this).attr("id"));
-          }
-
-
-          setTimeout(() => {
-            if (compareData.length >= 2 && compareData[0].id !== compareData[1].id) {
-              $(".data-hero-" + compareData[0].data).removeClass("enabled")
-              $(".data-hero-" + compareData[1].data).removeClass("enabled")
-              compareData = [];
-            }
-          
-
-          if (totalData.length >= 5) {
-            totalData = [];
-            alert("Parabéns você ganhou");
-            autorize = false;
-            newOrders();
-
-            $(".row")
-            .children("div")
-            .each(function (index) {
-  
-              $(this).attr("id", numbersOfCards[index]);
-              $(this).attr('data-hero', index);
-              $(this).addClass(`data-hero-${index}`);
-              $(this)
-                .find(".flip-card-back")
-                .children("img")
-                .attr("src", `heros/hero-${numbersOfCards[index]}.jpg`);
-              $(this)
-                .delay(300 * index)
-                .addClass("enabled");
-
-              setTimeout(() => {
-                $(this)
-                .delay(100 * index)
-                .removeClass("enabled");
-              }, 1500);
+                    return i;
+                }
+                orders.push(value);
+                return value;
             });
-          }
-        
-        }, 500);
-        });
 
-        $(".btn").click(function () {
-          autorize = true;
+            const result = formated.map((item) => {
+                return numbersOfCards[item];
+            });
 
-          newOrders();
+            numbersOfCards = result;
+        };
 
-          $(".row")
-            .children("div")
-            .each(function (index) {
-              $(this).attr("id", numbersOfCards[index]);
-              $(this).attr('data-hero', index);
-              $(this).addClass(`data-hero-${index}`);
-              $(this)
-                .find(".flip-card-back")
-                .children("img")
-                .attr("src", `heros/hero-${numbersOfCards[index]}.jpg`);
-              $(this)
-                .delay(100 * index)
-                .addClass("enabled");
+        $(document).ready(function() {
+            let compareData = [];
+            let totalData = [];
+            let autorize = false;
 
-              setTimeout(() => {
-                $(this)
-                .delay(100 * index)
-                .removeClass("enabled");
-              }, 1500);
+            $(".flip-card").click(function() {
+                if (!autorize) return;
+                if (totalData.some(value => value === $(this).attr("id")) || compareData.some(data => data.data === $(this).attr("data-hero"))) {
+                    console.log("Já foi clicado");
+                    return;
+                }
+                autorize = false
+
+                if (compareData.length < 2) {
+                    compareData.push({
+                        id: $(this).attr("id"),
+                        data: $(this).attr("data-hero")
+                    });
+                    $(this).addClass("enabled");
+
+                }
+
+                if (compareData.length >= 2 && compareData[0].id === compareData[1].id) {
+                    compareData = [];
+                    totalData.push($(this).attr("id"));
+                }
+
+
+
+
+                setTimeout(() => {
+                    if (compareData.length >= 2 && compareData[0].id !== compareData[1].id) {
+                        $(".data-hero-" + compareData[0].data).removeClass("enabled")
+                        $(".data-hero-" + compareData[1].data).removeClass("enabled")
+                        compareData = [];
+                    }
+
+
+                    if (totalData.length >= numbersOfCards.length / 2) {
+                        totalData = [];
+                        alert("Parabéns você ganhou");
+
+                        newOrders();
+
+                        $(".row")
+                            .children("div")
+                            .each(function(index) {
+
+                                $(this).attr("id", numbersOfCards[index]);
+                                $(this).attr('data-hero', index);
+                                $(this).addClass(`data-hero-${index}`);
+                                $(this)
+                                    .find(".flip-card-back")
+                                    .children("img")
+                                    .attr("src", `heros/hero-${numbersOfCards[index]}.jpg`);
+                                $(this)
+                                    .delay(100 * index)
+                                    .addClass("enabled");
+
+                                setTimeout(() => {
+                                    $(this)
+                                        .delay(100 * index)
+                                        .removeClass("enabled");
+                                }, 1500);
+                            });
+                    }
+                    autorize = true
+                }, 500);
+
+            });
+
+            $(".btn").click(function() {
+                autorize = true;
+
+                newOrders();
+
+                $(".row")
+                    .children("div")
+                    .each(function(index) {
+                        $(this).attr("id", numbersOfCards[index]);
+                        $(this).attr('data-hero', index);
+                        $(this).addClass(`data-hero-${index}`);
+                        $(this)
+                            .find(".flip-card-back")
+                            .children("img")
+                            .attr("src", `heros/hero-${numbersOfCards[index]}.jpg`);
+                        $(this)
+                            .delay(100 * index)
+                            .addClass("enabled");
+
+                        setTimeout(() => {
+                            $(this)
+                                .delay(100 * index)
+                                .removeClass("enabled");
+                        }, 1500);
+                    });
             });
         });
-      });
     </script>
-  </body>
+</body>
+
 </html>
